@@ -77,3 +77,21 @@ There are **two ways** to create a class.
 * ### Restrictions of Static Method
   * We cannot use `this` and `super` in static method.
   * Static method cannot use `non-static` members directly.
+
+## *Polymorphism*
+* Poly means **many** & morphs means **forms**
+* Polymorphism directly means that representing single thing into many forms.
+* We can perform polymorphism using overloading and overriding
+
+### Types of Polymorphism
+* There are mainly two types of polymorphism
+    * Runtime polymorphism
+    * Compile time polymorphism
+
+### *Compile time Polymorphism*
+* If you overload a static method in java, that is compile time polymorphism
+
+### *Run time Polymorphism*
+* When we do upcasting, it is known as runtime polymorphism
+    * Upcasting - When we are using reference variable of the parent class and object of child class.
+* Since method invocation is determined by the JVM not compiler, then it is known as runtime polymorphism.
