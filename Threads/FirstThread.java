@@ -7,8 +7,8 @@ class NewT extends Thread {
 public class FirstThread {
     public static void main(String args[]) {
         NewT obj = new NewT();
-        obj.start();
-        Thread t = new Thread();
+        Thread t = new Thread(obj);
+        t.start();
         System.out.println(t.currentThread());
     }
 }
