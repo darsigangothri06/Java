@@ -1,59 +1,38 @@
-import java.util.Scanner;
-
-// INCORRECT OUTPUT
-class MergeSort
-{
-	public static void main(String args[])
-	{
-		int a[] = {12,123,45,25,98,10,2,30};
-		int n = 8;
-		Merge_Sort(a,0,n-1);
-		System.out.println("After Sorting: ");
-		for(int i = 0; i < n; i++)
-		{
+class MergeSort {
+	public static void main(String args[]) {
+		int a[] = { 19, 23, 45, 2, 6, 9, 1, 10, 0 }, n = 9, i;
+		MergeS(a, 0, n - 1);
+		for (i = 0; i < n; i++)
 			System.out.println(a[i]);
-		}
 	}
-	public static void Merge_Sort(int a[], int low, int high)
-	{
-		if(high > low)
-		{
-			int mid = (low+high)/2;
-			Merge_Sort(a,low,mid);
-			Merge_Sort(a,mid+1,high);
-			Merge(a,low,high,mid);
+
+	public static void MergeS(int a[], int low, int high) {
+		if (high > low) {
+			int mid = (low + high) / 2;
+			MergeS(a, low, mid);
+			MergeS(a, mid + 1, high);
+			Merge(a, mid, low, high);
 		}
 	}
 
-	public static void Merge(int a[], int low, int high, int mid)
-	{
-		int temp[] = new int[8];
-		int i = low;
-		int j = mid + 1;
-		int k = low;
-		while(i <= mid && j <= high)
-		{
-			if(a[i] <= a[j])
-			{
-				temp[k++] = a[i++];
-			}
+	public static void Merge(int a[], int mid, int low, int high) {
+		int c[] = new int[20], i, j, k;
+		i = low;
+		j = mid + 1;
+		k = low;
+		while (i <= mid && j <= high) {
+			if (a[i] < a[j])
+				c[k++] = a[i++];
+			else if (a[i] > a[j])
+				c[k++] = a[j++];
 			else
-			{
-				temp[k++] = a[j++];
-			}
+				c[k++] = a[i++];
 		}
-
-		while(i <= mid)
-		{
-			temp[k++] = a[i++];
-		}
-		while(j <= high)
-		{
-			temp[k++] = a[j++];
-		}
-		for(i = 0; i < high; i++)
-		{
-			a[i] = temp[i];
-		}
+		while (i <= mid)
+			c[k++] = a[i++];
+		while (j <= high)
+			c[k++] = a[j++];
+		for (i = low; i <= high; i++)
+			a[i] = c[i];
 	}
 }

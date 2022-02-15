@@ -9,5 +9,7 @@ public class BasicEnum {
         System.out.println(s.valueOf("SUN"));
         System.out.println(s.valueOf("MON").ordinal());
 
+        for (DAYS x : DAYS.values())
+            System.out.println(x.ordinal());
     }
 }
