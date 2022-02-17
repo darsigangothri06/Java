@@ -48,3 +48,32 @@
   * Hence, a new string is created even though the string is already present in the memory pool.
 
 ## String Methods
+
+### contains()
+
+* The `contains()` method checks whether the specified string is present in string or not.
+* Syntax: `str1.contains(str2)`
+* Checks whether str2 is present in str1
+* return value is boolean
+* `""` gives true because empty string is subset of every other string.
+
+### split()
+* This method splits the string at the specified regex and returns `an array of substrings`
+* `string.split(String regex, int limit)`
+* `limit` is optional, controls the number of resulting substrings
+* If the regex passed to `split()` is invalid, the `split()` method raises `PatternSyntaxExpression`
+* If limit is 0, it gives all substrings
+* If limit is +ve(say n), then `split()` returns max n substrings
+
+### compare to()
+* The `compareTo()` method compares two strings lexicographically(in the dictionary order). The comparision is based on the unicode value of each character in the strings.
+* `string.compareTo(String str)`
+* returns
+  * 0 - if strings are equal
+  * -ve - if string comes before str
+  * +ve - if string comes after str
+
+### compareToIgnoreCase()
+
+* same as compareTo(), ignoring case differences
+
