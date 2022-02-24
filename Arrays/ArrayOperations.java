@@ -16,8 +16,5 @@ public class ArrayOperations {
 
         // equals()
         System.out.println(marks.equals(newMarks) + " " + marks.equals(marks));
-
-        // isEmpty()
-        System.out.println(Arrays.isEmp);
     }
 }
