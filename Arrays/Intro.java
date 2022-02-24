@@ -9,6 +9,7 @@ public class Intro {
         a = new int[10];
         a[9] = 12;
         System.out.println(a[9]);
+        System.out.println(a[0]); // 0 --- Old Array is destroyed along with their values
 
         // Arrays of Varying Size
         int[][] mat = new int[4][];
